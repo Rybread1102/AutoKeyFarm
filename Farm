@@ -1,0 +1,10 @@
+#SingleInstance, Force
+#NoEnv
+SendMode Input
+fire := 0
+
+NumpadDiv::SetTimer, AutoFire, % (fire := !fire) ? "25" : "Off"
+
+AutoFire:
+ControlClick, x850 y400, ahk_class ApolloRuntimeContentWindow,,,, Pos
+ return
